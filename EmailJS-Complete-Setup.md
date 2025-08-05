@@ -1,4 +1,4 @@
-# 📧 EmailJS Setup Guide for ABC Company Website
+# 📧 EmailJS Setup Guide for CE CO. LIMITED Website
 
 ## Complete Step-by-Step Setup to Send Emails to `rajatamang503@gmail.com`
 
@@ -44,7 +44,7 @@ New Contact Form Message from {{from_name}}
 ```
 Hello,
 
-You have received a new message from your ABC Company website:
+You have received a new message from your CE CO. LIMITED website:
 
 Name: {{from_name}}
 Email: {{from_email}}
@@ -55,7 +55,7 @@ Message:
 {{message}}
 
 ---
-This message was sent from your ABC Company website.
+This message was sent from your CE CO. LIMITED website.
 Reply directly to: {{reply_to}}
 Time: {{current_time}}
 ```
@@ -87,7 +87,7 @@ Estimated Price: ${{estimated_price}}
 
 ---
 Contact the customer at {{reply_to}} to provide a detailed quote.
-Generated from ABC Company website
+Generated from CE CO. LIMITED website
 ```
 
 3. **Save template** and copy the **Template ID** (looks like: `template_quote456`)
@@ -182,7 +182,7 @@ Subject: New Contact Form Message from John Doe
 
 Hello,
 
-You have received a new message from your ABC Company website:
+You have received a new message from your CE CO. LIMITED website:
 
 Name: John Doe
 Email: john@example.com
@@ -192,7 +192,7 @@ Service Needed: Residential Cleaning
 Message: I need weekly cleaning for my house...
 
 ---
-This message was sent from your ABC Company website.
+This message was sent from your CE CO. LIMITED website.
 Reply directly to: john@example.com
 ```
 

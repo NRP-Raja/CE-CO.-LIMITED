@@ -1,6 +1,6 @@
-# ABC Company - Professional Cleaning Services Website
+# CE CO. LIMITED - Professional Cleaning Services Website
 
-A modern, responsive website for ABC Company's professional cleaning services business.
+A modern, responsive website for CE CO. LIMITED's professional cleaning services business.
 
 ## 🌟 Features
 
@@ -177,7 +177,7 @@ This is a complete, production-ready website template. For additional customizat
 
 ## 📄 License
 
-This template is provided as-is for ABC Company. Modify and use according to your business needs.
+This template is provided as-is for CE CO. LIMITED. Modify and use according to your business needs.
 
 ---
 

@@ -1,4 +1,4 @@
-// Main JavaScript for ABC Company Website
+// Main JavaScript for CE CO. LIMITED Website
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize EmailJS with your actual public key
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initQuoteCalculator();
     initTestimonialSlider();
     initContactForm();
+    initGallery();
     initSmoothScrolling();
     initStickyElements();
     initAnimationOnScroll();
@@ -240,6 +241,76 @@ function initTestimonialSlider() {
         autoSlideInterval = setInterval(nextSlide, 5000);
     }
 }
+
+// Gallery functionality
+function initGallery() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    // Filter functionality
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                
+                if (filterValue === 'all' || itemCategory === filterValue) {
+                    item.classList.remove('hide');
+                    item.classList.add('show');
+                } else {
+                    item.classList.remove('show');
+                    item.classList.add('hide');
+                }
+            });
+        });
+    });
+
+    // Initialize all items as visible
+    galleryItems.forEach(item => {
+        item.classList.add('show');
+    });
+}
+
+// Lightbox functionality
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    lightboxImg.src = imageSrc;
+    lightbox.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Close lightbox when clicking outside the image
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+});
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
 
 // Contact form functionality
 function initContactForm() {
